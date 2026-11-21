@@ -1,0 +1,10 @@
+id,source,destination,protocol,port,action
+R-01,PC-01,PLC-01,TCP,502,allow
+R-02,PC-01,JUMP-01,TCP,443,allow
+R-03,JUMP-01,ENG-01,TCP,3389,allow
+R-04,HMI-01,PLC-01,TCP,502,allow
+R-05,PC-01,HMI-01,TCP,443,allow
+R-06,SRV-01,PC-01,TCP,22,allow
+R-07,JUMP-01,HIST-01,TCP,443,allow
+R-08,ENG-01,PLC-01,TCP,502,allow
+R-09,HMI-01,PLC-01,TCP,ANY,allow

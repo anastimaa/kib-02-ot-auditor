@@ -1,0 +1,8 @@
+id,name,zone,type
+PC-01,Рабочая станция,IT,workstation
+JUMP-01,Сервер доступа,DMZ,jump_server
+PLC-01,Контроллер,OT,plc
+HMI-01,Панель оператора,OT,hmi
+ENG-01,Инженерная станция,OT,engineering_station
+HIST-01,Архив данных,OT,historian
+SRV-01,Офисный сервер,IT,server
