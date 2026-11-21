@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "network_name": "Конфликт и внутренний сервис",
+  "zones": [
+    {
+      "id": "IT",
+      "name": "Офисная сеть"
+    },
+    {
+      "id": "DMZ",
+      "name": "Демилитаризованная зона"
+    },
+    {
+      "id": "OT",
+      "name": "Промышленная сеть"
+    }
+  ],
+  "assets": [
+    {
+      "id": "PC-01",
+      "name": "Рабочая станция",
+      "zone": "IT",
+      "type": "workstation"
+    },
+    {
+      "id": "JUMP-01",
+      "name": "Сервер доступа",
+      "zone": "DMZ",
+      "type": "jump_server"
+    },
+    {
+      "id": "PLC-01",
+      "name": "Контроллер",
+      "zone": "OT",
+      "type": "plc"
+    },
+    {
+      "id": "HMI-01",
+      "name": "Панель оператора",
+      "zone": "OT",
+      "type": "hmi"
+    },
+    {
+      "id": "ENG-01",
+      "name": "Инженерная станция",
+      "zone": "OT",
+      "type": "engineering_station"
+    },
+    {
+      "id": "HIST-01",
+      "name": "Архив данных",
+      "zone": "OT",
+      "type": "historian"
+    },
+    {
+      "id": "SRV-01",
+      "name": "Офисный сервер",
+      "zone": "IT",
+      "type": "server"
+    }
+  ],
+  "access_rules": [
+    {
+      "id": "R-01",
+      "source": "HMI-01",
+      "destination": "PLC-01",
+      "port": 502,
+      "protocol": "TCP",
+      "action": "allow"
+    },
+    {
+      "id": "R-02",
+      "source": "HMI-01",
+      "destination": "PLC-01",
+      "port": 502,
+      "protocol": "TCP",
+      "action": "deny"
+    },
+    {
+      "id": "R-03",
+      "source": "SRV-01",
+      "destination": "PC-01",
+      "port": 22,
+      "protocol": "TCP",
+      "action": "allow"
+    }
+  ]
+}
